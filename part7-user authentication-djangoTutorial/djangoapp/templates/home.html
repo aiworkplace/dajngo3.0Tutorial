@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<br>
+<div class="row">
+<td><a class="btn btn-sm btn-info" href="{% url 'create' %}">Add New Data</a></td>
+</div>
+<br>
+               <div class="row">
+
+			<table class="table table-sm">
+				<tr>
+					<th>Name</th>
+					<th>age </th>
+                    <th>Phone</th>
+                    <th>E-mail</th>
+					<th>Update</th>
+					<th>Remove</th>
+				</tr>
+
+				{% for data in dataset %}
+					<tr>
+						<td>{{data.name}}</td>
+                        <td>{{data.age}}</td>
+						<td>{{data.phone}}</td>
+                        <td>{{data.email}}</td>
+
+						<td><a class="btn btn-sm btn-info" href="{% url 'update' data.id %}">Update</a></td>
+						<td><a class="btn btn-sm btn-danger" href="{% url 'delete' data.id %}">Delete</a></td>
+					</tr>
+				{% endfor %}
+
+			</table>
+		</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+	<br>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card card-body h-100  border-info" id="profile-wrapper">
+					<img id="profile-pic" src="{% static 'img/arvan.jpg' %}" >
+					<hr>
+					<h4>Hi I'm Arvan!</h4>
+					<p>I love coding, doing research and collaborating</p>
+				</div>
+			</div>
+
+			<div class="col-md-9">
+				<div class="card card-body h-100  border-info">
+					<h4>What I Know</h4>
+					<hr>
+                    <p>Python, Django, HTML/CSS, JavaScript/Jquery, React, Postgres, AWS and APIs such as google maps, JavaScript charts and a whole bunch more I can’t possibly mention in one sentence!!
+                    <br>
+                         My Youtube Channel : <a href="https://www.youtube.com/channel/UCiKuwqQKQHRN3O-CaZmyppw?view_as=subscriber">ArvanWorkshop</a>
+                    </p>
+
+					<p>PS: Working Game Development and Machine Learning.</p>
+
+					<ul class="social-links">
+						<li><img class="social" src="{% static 'img/facebook.png' %}"></li>
+						<li><img class="social" src="{% static 'img/linkedin.png' %}"></li>
+						<li><img class="social" src="{% static 'img/twitter.png' %}"></li>
+						<li><img class="social" src="{% static 'img/youtube.png' %}"></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+{% endblock %}

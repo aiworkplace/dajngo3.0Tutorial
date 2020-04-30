@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="col-md-8">
+<div class="card card-body">
+    <h2 style="text-align: center">Create a New Data</h2>
+    <hr>
+			<form method="POST" action="" enctype="multipart/form-data">
+				{% csrf_token %}
+                {{ form.as_p }}
+			<input class="btn btn-primary" type="submit" name="Update Information">
+			</form>
+
+</div>
+    </div>
+    </div>
+
+{% endblock %}
